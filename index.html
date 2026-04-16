@@ -1,13 +1,567 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordo Kids — Детский центр</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">Ordo Kids</div>
+                <ul class="nav-menu">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#enroll">Запись</a></li>
+                </ul>
+                <a href="#" class="btn-cta">Ещё →</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Ordo Kids</h1>
+                    <p class="hero-subtitle">Детский сад / учебный центр / репетитор</p>
+                    <button class="btn-description">Описание</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&q=80&w=800" alt="Дети" class="hero-img">
+                        <div class="floating-badge">
+                            <div class="badge-icon">"</div>
+                            <div class="badge-text">
+                                <strong>200+</strong>
+                                <span>счастливых детей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative shapes -->
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </section>
+
+        <!-- About & Team Section -->
+        <section class="section-about-team" id="about">
+            <div class="container">
+                <!-- About Part -->
+                <div class="about-layout">
+                    <div class="about-text">
+                        <h2 class="about-title">Создаем среду, где хочется расти</h2>
+                        <p class="about-subtitle">Мы верим, что каждый ребенок уникален. Наша задача — мягко направить его интерес, обеспечить безопасность и дать лучшие инструменты для познания мира.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                                </div>
+                                <span class="feature-text">Обучение через игру</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <span class="feature-text">Профессиональные педагоги</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon mint">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                                </div>
+                                <span class="feature-text">Группы до 10 детей</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <span class="feature-text">Безопасная и уютная среда</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-side">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dc534b25fc5?auto=format&fit=crop&q=80&w=400" alt="Ordo Kids" class="small-img" referrerPolicy="no-referrer">
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-value color-green">5 лет</div>
+                        <div class="stat-label">опыта работы</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value color-gray">8</div>
+                        <div class="stat-label">педагогов</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value color-mint">200+</div>
+                        <div class="stat-label">детей</div>
+                    </div>
+                </div>
+
+                <!-- Team Part -->
+                <div class="team-section-inner" id="team">
+                    <div class="team-header">
+                        <h2 class="team-title">Наша команда</h2>
+                        <p class="team-subtitle">Люди, которые каждый день дарят детям заботу, знания и искренние улыбки.</p>
+                    </div>
+                    
+                    <div class="team-slider-container">
+                        <button class="slider-nav prev" id="teamPrev">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        
+                        <div class="team-slider-track">
+                            <div class="team-grid" id="teamGrid">
+                                <!-- Member 1 -->
+                                <div class="team-card blue">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" alt="Анна Смирнова">
+                                    </div>
+                                    <h3 class="member-name">Анна Смирнова</h3>
+                                    <p class="member-role">Старший воспитатель</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Дети 5–7 лет
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 5.0</div>
+                                        <div class="stat"><span class="clock">🕒</span> 5+ лет</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                                <!-- Member 2 -->
+                                <div class="team-card green">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200" alt="Елена Попова">
+                                    </div>
+                                    <h3 class="member-name">Елена Попова</h3>
+                                    <p class="member-role">Логопед-дефектолог</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Дети 3–7 лет
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 5.0</div>
+                                        <div class="stat"><span class="clock">🕒</span> 5+ лет</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                                <!-- Member 3 -->
+                                <div class="team-card yellow">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=200" alt="Мария Иванова">
+                                    </div>
+                                    <h3 class="member-name">Мария Иванова</h3>
+                                    <p class="member-role">Воспитатель</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Дети 1–3 года
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 5.0</div>
+                                        <div class="stat"><span class="clock">🕒</span> 5+ лет</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                                <!-- Member 4 -->
+                                <div class="team-card purple">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" alt="Ольга Ким">
+                                    </div>
+                                    <h3 class="member-name">Ольга Ким</h3>
+                                    <p class="member-role">Музыкальный рук.</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Все группы
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 5.0</div>
+                                        <div class="stat"><span class="clock">🕒</span> 5+ лет</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                                <!-- Member 5 -->
+                                <div class="team-card pink">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Иван Петров">
+                                    </div>
+                                    <h3 class="member-name">Иван Петров</h3>
+                                    <p class="member-role">Тренер по шахматам</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Дети 4–7 лет
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 4.9</div>
+                                        <div class="stat"><span class="clock">🕒</span> 3+ года</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                                <!-- Member 6 -->
+                                <div class="team-card blue">
+                                    <div class="member-photo">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200" alt="Наталья Соколова">
+                                    </div>
+                                    <h3 class="member-name">Наталья Соколова</h3>
+                                    <p class="member-role">Арт-терапевт</p>
+                                    <div class="member-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                        Все группы
+                                    </div>
+                                    <div class="member-stats">
+                                        <div class="stat"><span class="star">★</span> 5.0</div>
+                                        <div class="stat"><span class="clock">🕒</span> 7+ лет</div>
+                                    </div>
+                                    <button class="btn-meet">Познакомиться</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="slider-nav next" id="teamNext">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekdays (Budni) Section -->
+        <section class="section-budni" id="schedule">
+            <div class="container">
+                <div class="budni-header">
+                    <h2 class="budni-title">Будни в «Ordo Kids»</h2>
+                    <p class="budni-subtitle">Мы создали идеальный баланс между развитием, творчеством и здоровым питанием.</p>
+                </div>
+                
+                <div class="budni-toggle">
+                    <button class="toggle-btn active" data-target="schedule-content">Расписание</button>
+                    <button class="toggle-btn" data-target="menu-content">Меню питания</button>
+                </div>
+
+                <div id="schedule-content" class="toggle-pane active">
+                    <div class="budni-grid">
+                        <!-- Monday -->
+                        <div class="day-col blue">
+                            <h3>Понедельник</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> 09:00 - Зарядка</li>
+                                <li><span class="dot"></span> 10:00 - Развитие речи</li>
+                                <li><span class="dot"></span> 11:30 - Прогулка</li>
+                                <li><span class="dot"></span> 15:00 - Логопед</li>
+                                <li><span class="dot"></span> 16:30 - Творчество</li>
+                            </ul>
+                        </div>
+                        <!-- Tuesday -->
+                        <div class="day-col green">
+                            <h3>Вторник</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> 09:00 - Зарядка</li>
+                                <li><span class="dot"></span> 10:00 - Математика</li>
+                                <li><span class="dot"></span> 11:30 - Прогулка</li>
+                                <li><span class="dot"></span> 15:00 - Музыка</li>
+                                <li><span class="dot"></span> 16:30 - Игры</li>
+                            </ul>
+                        </div>
+                        <!-- Wednesday -->
+                        <div class="day-col yellow">
+                            <h3>Среда</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> 09:00 - Зарядка</li>
+                                <li><span class="dot"></span> 10:00 - Окружающий мир</li>
+                                <li><span class="dot"></span> 11:30 - Прогулка</li>
+                                <li><span class="dot"></span> 15:00 - Танцы</li>
+                                <li><span class="dot"></span> 16:30 - Лепка</li>
+                            </ul>
+                        </div>
+                        <!-- Thursday -->
+                        <div class="day-col purple">
+                            <h3>Четверг</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> 09:00 - Зарядка</li>
+                                <li><span class="dot"></span> 10:00 - Английский</li>
+                                <li><span class="dot"></span> 11:30 - Прогулка</li>
+                                <li><span class="dot"></span> 15:00 - Логопед</li>
+                                <li><span class="dot"></span> 16:30 - Рисование</li>
+                            </ul>
+                        </div>
+                        <!-- Friday -->
+                        <div class="day-col pink">
+                            <h3>Пятница</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> 09:00 - Зарядка</li>
+                                <li><span class="dot"></span> 10:00 - Чтение</li>
+                                <li><span class="dot"></span> 11:30 - Прогулка</li>
+                                <li><span class="dot"></span> 15:00 - Театр</li>
+                                <li><span class="dot"></span> 16:30 - Свободная игра</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="menu-content" class="toggle-pane">
+                    <div class="budni-grid">
+                        <div class="day-col blue">
+                            <h3>Понедельник</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> Завтрак: Каша овсяная</li>
+                                <li><span class="dot"></span> Обед: Суп овощной</li>
+                                <li><span class="dot"></span> Полдник: Фрукты</li>
+                                <li><span class="dot"></span> Ужин: Запеканка</li>
+                            </ul>
+                        </div>
+                        <div class="day-col green">
+                            <h3>Вторник</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> Завтрак: Омлет</li>
+                                <li><span class="dot"></span> Обед: Борщ</li>
+                                <li><span class="dot"></span> Полдник: Йогурт</li>
+                                <li><span class="dot"></span> Ужин: Рыбные котлеты</li>
+                            </ul>
+                        </div>
+                        <div class="day-col yellow">
+                            <h3>Среда</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> Завтрак: Сырники</li>
+                                <li><span class="dot"></span> Обед: Куриный суп</li>
+                                <li><span class="dot"></span> Полдник: Печенье</li>
+                                <li><span class="dot"></span> Ужин: Плов</li>
+                            </ul>
+                        </div>
+                        <div class="day-col purple">
+                            <h3>Четверг</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> Завтрак: Блинчики</li>
+                                <li><span class="dot"></span> Обед: Щи</li>
+                                <li><span class="dot"></span> Полдник: Творожок</li>
+                                <li><span class="dot"></span> Ужин: Тефтели</li>
+                            </ul>
+                        </div>
+                        <div class="day-col pink">
+                            <h3>Пятница</h3>
+                            <ul class="activity-list">
+                                <li><span class="dot"></span> Завтрак: Каша рисовая</li>
+                                <li><span class="dot"></span> Обед: Гороховый суп</li>
+                                <li><span class="dot"></span> Полдник: Яблоко</li>
+                                <li><span class="dot"></span> Ужин: Макароны с сыром</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section (formerly Enrollment) -->
+        <section class="section-booking" id="enroll">
+            <div class="container">
+                <div class="booking-wrapper">
+                    <div class="booking-categories">
+                        <button class="cat-btn active">Все</button>
+                        <button class="cat-btn">Pump</button>
+                        <button class="cat-btn">Boxing</button>
+                        <button class="cat-btn">Flow</button>
+                        <button class="cat-btn">Functional</button>
+                    </div>
+                    
+                    <div class="time-slots-grid">
+                        <button class="time-slot">09:00</button>
+                        <button class="time-slot active">10:00</button>
+                        <button class="time-slot">11:00</button>
+                        <button class="time-slot">12:00</button>
+                        <button class="time-slot">15:00</button>
+                        <button class="time-slot">16:00</button>
+                        <button class="time-slot">17:00</button>
+                        <button class="time-slot">18:00</button>
+                        <button class="time-slot">19:00</button>
+                        <button class="time-slot">20:00</button>
+                    </div>
+
+                    <div class="booking-header">
+                        <div class="month-selector">
+                            <button class="nav-arrow" id="prevMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                            <span class="current-month" id="currentMonthText">Апрель</span>
+                            <div class="header-right">
+                                <button class="btn-today" id="resetToday">Сегодня</button>
+                                <button class="nav-arrow" id="nextMonth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+                            </div>
+                        </div>
+                        <div class="date-picker">
+                            <div class="date-item">
+                                <span class="day-name">Пн</span>
+                                <span class="day-num">13</span>
+                            </div>
+                            <div class="date-item">
+                                <span class="day-name">Вт</span>
+                                <span class="day-num">14</span>
+                            </div>
+                            <div class="date-item">
+                                <span class="day-name">Ср</span>
+                                <span class="day-num">15</span>
+                            </div>
+                            <div class="date-item active">
+                                <span class="day-name">Чт</span>
+                                <span class="day-num">16</span>
+                            </div>
+                            <div class="date-item">
+                                <span class="day-name">Пт</span>
+                                <span class="day-num">17</span>
+                            </div>
+                            <div class="date-item">
+                                <span class="day-name">Сб</span>
+                                <span class="day-num">18</span>
+                            </div>
+                            <div class="date-item">
+                                <span class="day-name">Вс</span>
+                                <span class="day-num">19</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-list">
+                        <!-- Card 1 -->
+                        <div class="booking-card color-blue">
+                            <div class="card-accent"></div>
+                            <div class="card-main">
+                                <div class="card-header">
+                                    <h3 class="class-name">ШАХМАТНАЯ СТРАТЕГИЯ</h3>
+                                    <span class="spots-info">Еще 4 места</span>
+                                </div>
+                                <p class="class-time">10:00-10:45 • Сегодня</p>
+                                <div class="card-footer">
+                                    <div class="instructor">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Иван Петров" class="avatar">
+                                        <span class="name">Иван Петров</span>
+                                    </div>
+                                    <button class="btn-book-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="booking-card color-green">
+                            <div class="card-accent"></div>
+                            <div class="card-main">
+                                <div class="card-header">
+                                    <h3 class="class-name">АРТ-ТЕРАПИЯ</h3>
+                                    <span class="spots-info">Еще 6 мест</span>
+                                </div>
+                                <p class="class-time">11:30-12:15 • Сегодня</p>
+                                <div class="card-footer">
+                                    <div class="instructor">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100" alt="Наталья Соколова" class="avatar">
+                                        <span class="name">Наталья Соколова</span>
+                                    </div>
+                                    <button class="btn-book-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="booking-card color-pink">
+                            <div class="card-accent"></div>
+                            <div class="card-main">
+                                <div class="card-header">
+                                    <h3 class="class-name">РИТМИКА И ТАНЦЫ</h3>
+                                    <span class="spots-info">Еще 3 места</span>
+                                </div>
+                                <p class="class-time">15:00-15:45 • Сегодня</p>
+                                <div class="card-footer">
+                                    <div class="instructor">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Ольга Ким" class="avatar">
+                                        <span class="name">Ольга Ким</span>
+                                    </div>
+                                    <button class="btn-book-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="booking-card color-purple">
+                            <div class="card-accent"></div>
+                            <div class="card-main">
+                                <div class="card-header">
+                                    <h3 class="class-name">ЛОГОПЕДИЧЕСКИЕ ИГРЫ</h3>
+                                    <span class="spots-info">Мест нет</span>
+                                </div>
+                                <p class="class-time">16:30-17:15 • Сегодня</p>
+                                <div class="card-footer">
+                                    <div class="instructor">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100" alt="Елена Попова" class="avatar">
+                                        <span class="name">Елена Попова</span>
+                                    </div>
+                                    <button class="btn-book-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="section-map">
+            <div class="container">
+                <h2 class="section-title">Карта</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160257.55120153!2d71.3271584!3d51.1282205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424580c47db54609%3A0x97f9148dddb19b57!2z0JDRgdGC0LDQvdCwLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2sru!4v1713180000000!5m2!1sru!2sru" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <!-- Mobile Tab Bar (Matching Screenshot) -->
+    <div class="mobile-tab-bar">
+        <div class="tab-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Главная</span>
+        </div>
+        <div class="tab-item active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Запись</span>
+        </div>
+        <div class="tab-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span>Магазин</span>
+        </div>
+        <div class="tab-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Тренеры</span>
+        </div>
+        <div class="tab-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Профиль</span>
+        </div>
+    </div>
+</body>
+</html>

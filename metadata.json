@@ -1,5 +1,7 @@
 {
-  "name": "Ordo Kids - Детский центр",
-  "description": "Развивающий детский центр Ordo Kids: обучение через игру, профессиональные педагоги и уютная атмосфера для детей от 1 до 7 лет.",
-  "requestFramePermissions": []
+  "name": "Ordo Kids - Static",
+  "description": "Современный лендинг детского центра на чистом HTML, CSS и JS.",
+  "requestFramePermissions": [],
+  "C7": [],
+  "aq": []
 }
