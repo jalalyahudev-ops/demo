@@ -136,25 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Fade-in Animations on Scroll
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.about-block, .team-block, .schedule-block, .booking-wrapper, .section-map');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
-    });
+    const animatedElements = document.querySelectorAll('.reveal');
+    animatedElements.forEach(el => observer.observe(el));
 });
