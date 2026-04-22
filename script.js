@@ -79,27 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Booking Interactivity
-    const catBtns = document.querySelectorAll('.cat-btn');
-    catBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            catBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-        });
-    });
-
     const dateItems = document.querySelectorAll('.date-item');
     dateItems.forEach(item => {
         item.addEventListener('click', () => {
             dateItems.forEach(i => i.classList.remove('active'));
             item.classList.add('active');
-        });
-    });
-
-    const timeSlots = document.querySelectorAll('.time-slot');
-    timeSlots.forEach(slot => {
-        slot.addEventListener('click', () => {
-            timeSlots.forEach(s => s.classList.remove('active'));
-            slot.classList.add('active');
         });
     });
 
@@ -151,4 +135,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const animatedElements = document.querySelectorAll('.reveal');
     animatedElements.forEach(el => observer.observe(el));
+
+    // 6. Photo Slider Logic (About section)
+    const slides = document.querySelectorAll('#aboutSlides .slide');
+    let currentAboutSlide = 0;
+    
+    function showAboutSlide(index) {
+        if (!slides.length) return;
+        slides.forEach((slide) => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    document.getElementById('aboutNext')?.addEventListener('click', () => {
+        if (!slides.length) return;
+        currentAboutSlide = (currentAboutSlide + 1) % slides.length;
+        showAboutSlide(currentAboutSlide);
+    });
+
+    document.getElementById('aboutPrev')?.addEventListener('click', () => {
+        if (!slides.length) return;
+        currentAboutSlide = (currentAboutSlide - 1 + slides.length) % slides.length;
+        showAboutSlide(currentAboutSlide);
+    });
+
+    // 7. Enroll Modal Logic
+    const enrollModal = document.getElementById('enrollModal');
+    const enrollForm = document.getElementById('enrollForm');
+    const closeEnrollModal = document.getElementById('closeModal');
+    const enrollButtons = document.querySelectorAll('a[href="#enroll"], .btn-cta');
+
+    enrollButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Open modal instead of scrolling to booking section if it says 'Записаться'
+            if(btn.textContent.includes('Записаться')) {
+                e.preventDefault();
+                enrollModal?.classList.add('active');
+            }
+        });
+    });
+
+    closeEnrollModal?.addEventListener('click', () => {
+        enrollModal?.classList.remove('active');
+    });
+
+    enrollModal?.addEventListener('click', (e) => {
+        if(e.target === enrollModal) {
+            enrollModal.classList.remove('active');
+        }
+    });
+
+    enrollForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.');
+        enrollModal?.classList.remove('active');
+        enrollForm.reset();
+    });
+
+    // 8. Route Button Logic
+    const shareBtn = document.getElementById('shareBtn');
+    shareBtn?.addEventListener('click', () => {
+        const destLat = 42.87;
+        const destLon = 74.59;
+        
+        // Открываем вкладку сразу, чтобы избежать блокировки (Popup Blocker)
+        const routeWindow = window.open('about:blank', '_blank');
+        if (routeWindow) {
+            routeWindow.document.write('<html><body style="font-family:sans-serif; text-align:center; padding-top:20vh; color:#1a2b3c;"><h2>Построение маршрута...</h2><p>Пожалуйста, разрешите доступ к геопозиции, если браузер запросит.</p></body></html>');
+        }
+
+        const fallbackUrl = `https://yandex.ru/maps/?mode=routes&rtext=~${destLat},${destLon}`;
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    // Точный маршрут от текущих координат пользователя
+                    const explicitUrl = `https://yandex.ru/maps/?mode=routes&rtext=${position.coords.latitude},${position.coords.longitude}~${destLat},${destLon}`;
+                    if (routeWindow) routeWindow.location.href = explicitUrl;
+                    else window.location.href = explicitUrl;
+                },
+                (error) => {
+                    // Фолбэк, если пользователь отказал в доступе к геопозиции
+                    if (routeWindow) routeWindow.location.href = fallbackUrl;
+                    else window.location.href = fallbackUrl;
+                },
+                { timeout: 6000, maximumAge: 60000 }
+            );
+        } else {
+            if (routeWindow) routeWindow.location.href = fallbackUrl;
+            else window.location.href = fallbackUrl;
+        }
+    });
 });
